@@ -16,6 +16,7 @@ module.exports = {
   module: {
     loaders
   },
+  devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
   output: {
     path: path.join(__dirname, 'dist'), // output folder
     publicPath: '/',
