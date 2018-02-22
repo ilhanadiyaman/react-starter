@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var loaders = require('./webpack.loaders');
 
 const HOST = process.env.HOST || '127.0.0.1';
 const PORT = process.env.PORT || '8080';
@@ -8,6 +9,12 @@ module.exports = {
   entry: [
     './src/index.js' // app's entry point
   ],
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  module: {
+    loaders
+  },
   output: {
     path: path.join(__dirname, 'dist'), // output folder
     publicPath: '/',
