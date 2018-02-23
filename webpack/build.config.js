@@ -11,16 +11,16 @@ module.exports = merge(common, {
         warnings: false,
         screw_ie8: true,
         drop_console: true,
-        drop_debugger: true,
-      },
+        drop_debugger: true
+      }
     }),
     // Production mode
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
     // Minify CSS
     new webpack.LoaderOptionsPlugin({
-      minimize: true,
-    }),
-  ],
+      minimize: true
+    })
+  ]
 });

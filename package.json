@@ -1,14 +1,34 @@
 {
-  "name": "react-redux-webpack-babel-eslint-prettier-jest-setup",
-  "version": "1.0.0",
+  "name": "react-starter",
+  "version": "0.0.1",
   "main": "index.js",
+  "description": "React 16 Webpack 3 Babel ESLint Jest Starter Kit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilhanadiyaman/react-starter"
+  },
   "license": "MIT",
+  "author": "Ilhan Adiyaman",
+  "homepage": "https://github.com/ilhanadiyaman/react-starter",
+  "keywords": [
+    "react",
+    "webpack",
+    "hot reloading",
+    "react-hot-loader",
+    "starter",
+    "jest",
+    "eslint",
+    "babel",
+    "setup",
+    "boilerplate"
+  ],
   "scripts": {
     "build": "webpack --config ./webpack/build.config.js",
     "clean": "rimraf dist/*",
     "start": "webpack-dev-server --config ./webpack/dev.config.js",
     "lint": "eslint --ext js --ext jsx src",
     "lint:fix": "eslint --fix --ext js --ext jsx src",
+    "test": "export NODE_ENV=test && jest",
     "deploy": "yarn clean && webpack --config ./webpack/deploy.config.js",
     "release:major": "npm version major && git push --follow-tags",
     "release:minor": "npm version minor && git push --follow-tags",
@@ -20,6 +40,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.1",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -35,6 +56,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.9",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.4.2",
     "react-hot-loader": "^3.1.3",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1",
@@ -44,5 +66,11 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "jest": {
+    "verbose": true,
+    "bail": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage"
   }
 }
