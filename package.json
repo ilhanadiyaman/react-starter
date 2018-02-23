@@ -7,9 +7,12 @@
     "build": "webpack --config ./webpack/build.config.js",
     "clean": "rimraf dist/*",
     "start": "webpack-dev-server --config ./webpack/dev.config.js",
-    "lint": "eslint --ext js --ext jsx src || exit 0",
-    "lint:fix": "eslint --fix --ext js --ext jsx src || exit 0",
-    "deploy": "yarn clean && webpack --config ./webpack/deploy.config.js"
+    "lint": "eslint --ext js --ext jsx src",
+    "lint:fix": "eslint --fix --ext js --ext jsx src",
+    "deploy": "yarn clean && webpack --config ./webpack/deploy.config.js",
+    "release:major": "npm version major && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:patch": "npm version patch && git push --follow-tags"
   },
   "babel": {
     "presets": ["env", "react", "stage-2"]
