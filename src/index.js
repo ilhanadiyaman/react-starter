@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import '../public/css/main.css';
+
 const title = 'Minimal Setup';
 
 ReactDOM.render(<div>{title}</div>, document.getElementById('root'));

@@ -1,5 +1,7 @@
 const path = require('path');
 const loaders = require('./loaders');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -17,4 +19,10 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js', // output file name
   },
+  plugins: [
+    new ExtractTextPlugin('style.bundle.css'),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+  ],
 };
