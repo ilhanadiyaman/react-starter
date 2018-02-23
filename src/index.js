@@ -6,4 +6,6 @@ const title = 'Minimal Setup';
 ReactDOM.render(<div>{title}</div>, document.getElementById('root'));
 
 // Hot module replacing without page refresh
-module.hot.accept();
+if (module.hot) {
+  module.hot.accept();
+}
