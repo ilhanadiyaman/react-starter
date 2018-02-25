@@ -10,18 +10,7 @@
   "license": "MIT",
   "author": "Ilhan Adiyaman",
   "homepage": "https://github.com/ilhanadiyaman/react-starter",
-  "keywords": [
-    "react",
-    "webpack",
-    "hot reloading",
-    "react-hot-loader",
-    "starter",
-    "jest",
-    "eslint",
-    "babel",
-    "setup",
-    "boilerplate"
-  ],
+  "keywords": ["react", "webpack", "hot reloading", "react-hot-loader", "starter", "jest", "eslint", "babel", "setup", "boilerplate"],
   "scripts": {
     "build": "webpack --config ./webpack/build.config.js",
     "clean": "rimraf dist/*",
@@ -58,8 +47,8 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.4.2",
     "react-hot-loader": "^3.1.3",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1",
+    "webpack": "^4.0.0",
+    "webpack-dev-server": "^3.0.0",
     "webpack-merge": "^4.1.2",
     "webpack-s3-plugin": "^1.0.0-rc.0"
   },
