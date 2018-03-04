@@ -12,7 +12,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   module: {
-    loaders,
+    rules: loaders,
   },
   output: {
     path: path.join(__dirname, '..', 'dist'), // output folder
