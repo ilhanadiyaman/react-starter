@@ -22,8 +22,8 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.bundle.css'),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/img/favicon.ico',
+      template: './src/assets/index.html',
+      favicon: './src/assets/img/favicon.ico',
     }),
   ],
 };

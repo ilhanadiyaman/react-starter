@@ -11,3 +11,4 @@
 * Babel
 * ESLint
 * Jest 22
+* Blueprintjs
